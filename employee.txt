@@ -1,0 +1,52 @@
+package javaprog;
+import java.io.IOException;
+import java.util.Scanner;
+public class Employee {
+int EmpID;
+String empName;
+int total_leaves;
+double basic_salary;
+Scanner sc;
+Employee()
+{
+	sc=new Scanner(System.in);
+	
+}
+Employee(int id,String name,int leaves,double salary)
+{
+	EmpID=id;
+	empName=name;
+	total_leaves=leaves;
+	basic_salary=salary;
+	}
+    void display()
+    {
+    	double pf=basic_salary*12/100;
+    	double hra=basic_salary*50/100;
+    	double total_salary=basic_salary+hra-pf;
+    	System.out.println("Employee Id="+EmpID);
+    	System.out.println("Employee Name="+empName);
+    	System.out.println("Gross Salary="+basic_salary);
+    }
+    public void input()
+    {
+    	System.out.println("Emnter Emp id");
+    	EmpID=sc.nextInt();
+    	System.out.println("Enter the Name of the Employee");
+    	empName=sc.next();
+    	System.out.println("Enter the basic sallary of the employee");
+    	basic_salary=sc.nextDouble();
+    }
+    	
+    	
+    	
+    
+	public static void main(String[] args)throws IOException
+	{
+		
+		
+		// TODO Auto-generated method stub
+
+	}
+
+	}
